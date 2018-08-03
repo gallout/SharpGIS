@@ -1,0 +1,77 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITS.Core.Spectrum", "ITS.Core.Spectrum\ITS.Core.Spectrum.csproj", "{67357310-F809-4BFA-8129-E84F0427195A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{4D94F4B7-A106-4B0B-9A33-8CA2206CC8A1}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITS.Data.Spectrum", "ITS.Data.Spectrum\ITS.Data.Spectrum.csproj", "{7AD81FD1-32A7-4520-8394-1BF99A185780}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITS.Managers.SpectrumManagers", "ITS.Managers.SpectrumManagers\ITS.Managers.SpectrumManagers.csproj", "{14CE6481-AA5E-44C2-B9EA-1DDE83D21024}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITS.MapObjects.SpectrumMapObject", "ITS.MapObjects.SpectrumMapObject\ITS.MapObjects.SpectrumMapObject.csproj", "{68729B07-A6A2-4008-9908-4F54702F7005}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITS.Services.SpectrumServices", "ITS.Services.SpectrumServices\ITS.Services.SpectrumServices.csproj", "{E3D5B857-3AEC-4FD5-B695-1ED9011BE188}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITS.Test.Spectrum", "ITS.Test.Spectrum\ITS.Test.Spectrum.csproj", "{F2540187-9B97-4DB5-A9A3-AB6CC68276A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITS.DbMigration.Spectrum", "ITS.DbMigration.Spectrum\ITS.DbMigration.Spectrum.csproj", "{331E8325-52FC-4E9A-91BC-3ADA67C7CCEE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".docs", ".docs", "{135A4F06-4140-4848-A548-7CB0D565E93B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".slowCheetah", ".slowCheetah", "{C85F51A1-0ED7-4D44-8EB0-034A3123C5AE}"
+	ProjectSection(SolutionItems) = preProject
+		.slowCheetah\SlowCheetah.Tasks.dll = .slowCheetah\SlowCheetah.Tasks.dll
+		.slowCheetah\SlowCheetah.Transforms.targets = .slowCheetah\SlowCheetah.Transforms.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{67357310-F809-4BFA-8129-E84F0427195A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67357310-F809-4BFA-8129-E84F0427195A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67357310-F809-4BFA-8129-E84F0427195A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67357310-F809-4BFA-8129-E84F0427195A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AD81FD1-32A7-4520-8394-1BF99A185780}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AD81FD1-32A7-4520-8394-1BF99A185780}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AD81FD1-32A7-4520-8394-1BF99A185780}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AD81FD1-32A7-4520-8394-1BF99A185780}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14CE6481-AA5E-44C2-B9EA-1DDE83D21024}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14CE6481-AA5E-44C2-B9EA-1DDE83D21024}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14CE6481-AA5E-44C2-B9EA-1DDE83D21024}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14CE6481-AA5E-44C2-B9EA-1DDE83D21024}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68729B07-A6A2-4008-9908-4F54702F7005}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68729B07-A6A2-4008-9908-4F54702F7005}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68729B07-A6A2-4008-9908-4F54702F7005}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68729B07-A6A2-4008-9908-4F54702F7005}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3D5B857-3AEC-4FD5-B695-1ED9011BE188}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3D5B857-3AEC-4FD5-B695-1ED9011BE188}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3D5B857-3AEC-4FD5-B695-1ED9011BE188}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3D5B857-3AEC-4FD5-B695-1ED9011BE188}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2540187-9B97-4DB5-A9A3-AB6CC68276A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2540187-9B97-4DB5-A9A3-AB6CC68276A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2540187-9B97-4DB5-A9A3-AB6CC68276A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2540187-9B97-4DB5-A9A3-AB6CC68276A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{331E8325-52FC-4E9A-91BC-3ADA67C7CCEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{331E8325-52FC-4E9A-91BC-3ADA67C7CCEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{331E8325-52FC-4E9A-91BC-3ADA67C7CCEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{331E8325-52FC-4E9A-91BC-3ADA67C7CCEE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+EndGlobal

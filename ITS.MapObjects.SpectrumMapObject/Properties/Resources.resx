@@ -1,0 +1,463 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="PluginBaseAcceptGroupName" xml:space="preserve">
+    <value>Сохранение изменений</value>
+  </data>
+  <data name="PluginBaseAcceptUserFunctionalName" xml:space="preserve">
+    <value>Сохранить изменения</value>
+  </data>
+  <data name="PluginBaseAddPolygonObjectUserFunctionalName" xml:space="preserve">
+    <value>Добавить полигональный объект</value>
+  </data>
+  <data name="PluginBaseBackGroupName" xml:space="preserve">
+    <value>История изменений</value>
+  </data>
+  <data name="PluginBaseBackUserFunctionalName" xml:space="preserve">
+    <value>Назад</value>
+  </data>
+  <data name="PluginBaseCancelGroupName" xml:space="preserve">
+    <value>Сохранение изменений</value>
+  </data>
+  <data name="PluginBaseCancelUserFunctionalName" xml:space="preserve">
+    <value>Отменить изменения</value>
+  </data>
+  <data name="PluginBaseCopyPasteVeloObjectUserFunctionalName" xml:space="preserve">
+    <value>Копировать </value>
+  </data>
+  <data name="PluginBaseDeleteObjectUserFunctionalName" xml:space="preserve">
+    <value>Удалить велопарковку</value>
+  </data>
+  <data name="PluginBaseEditVeloObjectUserFunctionalName" xml:space="preserve">
+    <value>Редактировать информацию о велопарковке</value>
+  </data>
+  <data name="PluginBaseForwardGroupName" xml:space="preserve">
+    <value>История изменений</value>
+  </data>
+  <data name="PluginBaseForwardUserFunctionalName" xml:space="preserve">
+    <value>Вперёд</value>
+  </data>
+  <data name="PluginToolName" xml:space="preserve">
+    <value>Велопарковки</value>
+  </data>
+  <data name="PluginBaseRotateGeometryUserFunctionalName" xml:space="preserve">
+    <value>Повернуть геометрию</value>
+  </data>
+  <data name="PluginBaseVeloObjectZoomUserFunctionalName" xml:space="preserve">
+    <value>Масштабирование</value>
+  </data>
+  <data name="PluginBaseSelectVeloObjectDismantleShortUserFunctionalName" xml:space="preserve">
+    <value>Демонтировать</value>
+  </data>
+  <data name="PluginBaseSelectVeloObjectDismantleGroupName" xml:space="preserve">
+    <value>Статус</value>
+  </data>
+  <data name="PluginBaseSelectVeloObjectDismantleUserFunctionalName" xml:space="preserve">
+    <value>Отобразить подлежащие демонтированию</value>
+  </data>
+  <data name="PluginBaseSelectVeloObjectRequiredGroupName" xml:space="preserve">
+    <value>Статус</value>
+  </data>
+  <data name="PluginBaseSelectVeloObjectRequiredShortUserFunctionalName" xml:space="preserve">
+    <value>Требуются</value>
+  </data>
+  <data name="PluginBaseSelectVeloObjectRequiredUserFunctionalName" xml:space="preserve">
+    <value>Отобразить требуемые </value>
+  </data>
+  <data name="PluginBaseSelectVeloObjectSetGroupName" xml:space="preserve">
+    <value>Статус</value>
+  </data>
+  <data name="PluginBaseSelectVeloObjectSetShortUserFunctionalName" xml:space="preserve">
+    <value>Установленные</value>
+  </data>
+  <data name="PluginBaseSelectVeloObjectSetUserFunctionalName" xml:space="preserve">
+    <value>Отобразить установленные</value>
+  </data>
+  <data name="PluginBaseSelectVeloObjectUserFunctionalName" xml:space="preserve">
+    <value>Выбрать</value>
+  </data>
+  <data name="PluginBaseVeloObjectInfoGroupName" xml:space="preserve">
+    <value>Ведомости</value>
+  </data>
+  <data name="PluginBaseVeloObjectInfoUserFunctionalName" xml:space="preserve">
+    <value>Информация о велопарковке</value>
+  </data>
+  <data name="VeloObjectLayerAlias" xml:space="preserve">
+    <value>Велопарковки</value>
+  </data>
+  <data name="PluginBaseSummaryGroupName" xml:space="preserve">
+    <value>Ведомости</value>
+  </data>
+  <data name="PluginBaseSummaryUserFunctionalName" xml:space="preserve">
+    <value>Сводная ведомость</value>
+  </data>
+  <data name="PluginBaseToolsGroupName" xml:space="preserve">
+    <value>Инструменты</value>
+  </data>
+  <data name="PluginBaseEditGeometryVeloObjectUserFunctionalName" xml:space="preserve">
+    <value>Редактировать геометрию</value>
+  </data>
+  <data name="PluginBaseAddPointObjectUserFunctionalName" xml:space="preserve">
+    <value>Добавить велопарковку</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="PluginBaseAcceptImageSource" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AcceptImageSource.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Advertisement_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Advertisement_0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Advertisement_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Advertisement_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Advertisement_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Advertisement_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Advertisement_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Advertisement_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Advertisement_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Advertisement_4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PluginBaseBackImageSource" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BackImageSource.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PluginBaseCancelImageSource" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CancelImageSource.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dinner" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dinner.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EditAdvertisementImageSource" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EditAdvertisementImageSource.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PluginBaseEditGeometryVeloObjectImageSource" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EditGeometrySomeObjectImageSource.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="email" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\email.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fax" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fax.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PluginBaseForwardImageSource" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ForwardImageSource.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icq" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icq.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="itsgisWND_BG_11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\itsgisWND_BG-11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="itsgisWND_BottomButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\itsgisWND_BottomButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="OrganizationInformationImageSource1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\OrganizationInformationImageSource1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="phone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\phone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SearchOrganizationImageSource" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SearchOrganizationImageSource.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="site" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\site.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="skype" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\skype.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="time" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\time.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PluginBaseAddLineObjectImageSource" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PluginBaseAddLineObjectImageSource.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PluginBaseAddLineObjectUserFunctionalName" xml:space="preserve">
+    <value>Добавить линейный объект</value>
+  </data>
+  <data name="PluginBaseAddPointObjectImageSource" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PluginBaseAddPointObjectImageSource.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PluginBaseAddPolygonObjectImageSource" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PluginBaseAddPolygonObjectImageSource.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PluginBaseDeleteObjectImageSource" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PluginBaseDeleteObjectImageSource.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PluginBaseRotateGeometryImageSource" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PluginBaseRotateGeometryImageSource.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PluginBaseCopyPasteVeloObjectImageSource" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PluginBaseCopyPasteVeloObjectImageSource.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PluginBaseDeleteVeloObjectImageSource" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PluginBaseDeleteVeloObjectImageSource.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PluginBaseEditVeloObjectImageSource" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PluginBaseEditVeloObjectImageSource.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PluginBaseMoveVeloObjectImageSource" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PluginBaseMoveVeloObjectImageSource.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PluginBaseVeloObjectZoomImageSource" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PluginBaseSearchVeloObjectImageSource.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PluginBaseSelectVeloObjectDismantleSmallImageSource" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PluginBaseSelectVeloObjectDismantleSmallImageSource.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PluginBaseSelectVeloObjectImageSource" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PluginBaseSelectVeloObjectImageSource.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PluginBaseSelectVeloObjectRequiredSmallImageSource" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PluginBaseSelectVeloObjectRequiredSmallImageSource.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PluginBaseSelectVeloObjectSetSmallImageSource" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PluginBaseSelectVeloObjectSetSmallImageSource.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PluginBaseVeloObjectInfoImageSource" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PluginBaseVeloObjectInfoImageSource.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="none1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\none1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PluginBaseSelectVeloObjectMobileGroupName" xml:space="preserve">
+    <value>Статус</value>
+  </data>
+  <data name="PluginBaseSelectVeloObjectMobileShortUserFunctionalName" xml:space="preserve">
+    <value>Мобильные</value>
+  </data>
+  <data name="PluginBaseSelectVeloObjectMobileUserFunctionalName" xml:space="preserve">
+    <value>Отобразить мобильные</value>
+  </data>
+  <data name="PluginBaseSelectVeloObjectMobileSmallImageSource" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PluginBaseSelectVeloObjectMobileSmallImageSource.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="VeloObjectInfoImageSource" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PluginBaseVeloObjectInfoImageSource1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="VeloObjectInformationImageSource1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SomeObjectInformationImageSource1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PluginBaseMoveVeloObjectUserFunctionalName" xml:space="preserve">
+    <value>Переместить велопарковку</value>
+  </data>
+  <data name="PluginBaseSummaryImageSource" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PluginBaseSummaryImageSource.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="k1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="k2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="k3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="k4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="k5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="k6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="k7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="k8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="n1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\n1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="n2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\n2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="n3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\n3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="n4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\n4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="n5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\n5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="n6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\n6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="n7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\n7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="n8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\n8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="parking1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\parking1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="d1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\d1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="d2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\d2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="d3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\d3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="d4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\d4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="d5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\d5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="d6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\d6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="d7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\d7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="d8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\d8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dnone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dnone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="knone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\knone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PluginBaseSelectVeloObjectCelebrateGroupName" xml:space="preserve">
+    <value>Статус</value>
+  </data>
+  <data name="PluginBaseSelectVeloObjectCelebrateShortUserFunctionalName" xml:space="preserve">
+    <value>Праздничный</value>
+  </data>
+  <data name="PluginBaseSelectVeloObjectCelebrateUserFunctionalName" xml:space="preserve">
+    <value>Отобразить праздничные</value>
+  </data>
+  <data name="PluginBaseSelectVeloObjectCelebrateSmallImageSource" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PluginBaseSelectVeloObjectCelebrateSmallImageSource.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PluginBaseVeloObjectZoomGroupName" xml:space="preserve">
+    <value>Инструменты</value>
+  </data>
+</root>

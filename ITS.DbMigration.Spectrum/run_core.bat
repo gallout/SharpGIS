@@ -1,0 +1,2 @@
+Migrator.Console.exe Postgre "Server= localhost;Port=5432;Database=gis;User ID=pgroot;Password=1234;Encoding=utf8;CommandTimeout=1000;Timeout=1000" ITS.DbMigration.Core.dll
+ping -n 1 -w 10000 192.168.254.254 >nul

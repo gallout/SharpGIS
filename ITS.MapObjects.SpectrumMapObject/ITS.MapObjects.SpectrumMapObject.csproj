@@ -1,0 +1,600 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{68729B07-A6A2-4008-9908-4F54702F7005}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ITS.MapObjects.SpectrumMapObject</RootNamespace>
+    <AssemblyName>ITS.MapObjects.SpectrumMapObject</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SlowCheetahTargets Condition=" '$(SlowCheetahTargets)'=='' ">..\.slowCheetah\SlowCheetah.Transforms.targets</SlowCheetahTargets>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GeoAPI, Version=1.7.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ITS.Core.5.2.7398.418\lib\GeoAPI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GeoUtility, Version=3.1.6.0, Culture=neutral, PublicKeyToken=8055d2e1a20cc207, processorArchitecture=MSIL">
+      <HintPath>..\packages\ITS.Core.5.2.7398.418\lib\GeoUtility.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\ITS.Core.5.2.7398.418\lib\ICSharpCode.SharpZipLib.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=1.0.1.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\ITS.Core.5.2.7398.418\lib\Iesi.Collections.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ITS.Client.Core, Version=5.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ITS.Plugin.Core.5.2.7398.418\lib\ITS.Client.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ITS.Client.Interface.Guifreaks.Common, Version=5.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ITS.Plugin.Core.5.2.7398.418\lib\ITS.Client.Interface.Guifreaks.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ITS.Client.Interface.Guifreaks.NavigationBar, Version=5.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ITS.Plugin.Core.5.2.7398.418\lib\ITS.Client.Interface.Guifreaks.NavigationBar.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ITS.Client.Interface.StateMachine, Version=5.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ITS.Plugin.Core.5.2.7398.418\lib\ITS.Client.Interface.StateMachine.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ITS.Client.Interface.VisualInterface, Version=5.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ITS.Plugin.Core.5.2.7398.418\lib\ITS.Client.Interface.VisualInterface.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ITS.Common.RtfWriter, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ITS.Common.RtfWriter.5.0.261.152\lib\ITS.Common.RtfWriter.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ITS.Core, Version=5.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ITS.Core.5.2.7398.418\lib\ITS.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ITS.GIS.CoreToGeoTranslators, Version=5.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ITS.GIS.5.2.7398.418\lib\ITS.GIS.CoreToGeoTranslators.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ITS.GIS.GeoAPI, Version=5.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ITS.GIS.5.2.7398.418\lib\ITS.GIS.GeoAPI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ITS.GIS.MapEntities, Version=5.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ITS.GIS.5.2.7398.418\lib\ITS.GIS.MapEntities.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ITS.GIS.UIControls, Version=5.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ITS.GIS.5.2.7398.418\lib\ITS.GIS.UIControls.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ITS.Managers.BaseManagers, Version=5.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ITS.Plugin.Core.5.2.7398.418\lib\ITS.Managers.BaseManagers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ITS.MapObjects.BaseMapObject, Version=5.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ITS.Plugin.Core.5.2.7398.418\lib\ITS.MapObjects.BaseMapObject.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ITS.MapObjects.BaseMapObject.Misc, Version=5.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ITS.Plugin.Core.5.2.7398.418\lib\ITS.MapObjects.BaseMapObject.Misc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ITS.MapObjects.EditBaseDictionariesPlugin, Version=4.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ITS.Plugin.EditGeometry.5.2.7398.418\lib\ITS.MapObjects.EditBaseDictionariesPlugin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ITS.MapObjects.EditGeometryPlugin, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ITS.Plugin.EditGeometry.5.2.7398.418\lib\ITS.MapObjects.EditGeometryPlugin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ITS.ProjectBase.Data, Version=5.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ITS.Core.5.2.7398.418\lib\ITS.ProjectBase.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ITS.ProjectBase.Utils, Version=5.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ITS.Core.5.2.7398.418\lib\ITS.ProjectBase.Utils.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Lucene.Net, Version=2.9.4.1, Culture=neutral, PublicKeyToken=85089178b9ac3181, processorArchitecture=MSIL">
+      <HintPath>..\packages\ITS.Core.5.2.7398.418\lib\Lucene.Net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Caching, Version=5.0.414.0, Culture=neutral, PublicKeyToken=abefde60aa51e9a6, processorArchitecture=MSIL">
+      <HintPath>..\packages\ITS.Core.5.2.7398.418\lib\Microsoft.Practices.EnterpriseLibrary.Caching.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=5.0.414.0, Culture=neutral, PublicKeyToken=abefde60aa51e9a6, processorArchitecture=MSIL">
+      <HintPath>..\packages\ITS.Core.5.2.7398.418\lib\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=5.0.414.0, Culture=neutral, PublicKeyToken=abefde60aa51e9a6, processorArchitecture=MSIL">
+      <HintPath>..\packages\ITS.Core.5.2.7398.418\lib\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging, Version=5.0.414.0, Culture=neutral, PublicKeyToken=abefde60aa51e9a6, processorArchitecture=MSIL">
+      <HintPath>..\packages\ITS.Core.5.2.7398.418\lib\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF, Version=5.0.414.0, Culture=neutral, PublicKeyToken=abefde60aa51e9a6, processorArchitecture=MSIL">
+      <HintPath>..\packages\ITS.Core.5.2.7398.418\lib\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging, Version=5.0.414.0, Culture=neutral, PublicKeyToken=abefde60aa51e9a6, processorArchitecture=MSIL">
+      <HintPath>..\packages\ITS.Core.5.2.7398.418\lib\Microsoft.Practices.EnterpriseLibrary.Logging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Validation, Version=5.0.414.0, Culture=neutral, PublicKeyToken=abefde60aa51e9a6, processorArchitecture=MSIL">
+      <HintPath>..\packages\ITS.Core.5.2.7398.418\lib\Microsoft.Practices.EnterpriseLibrary.Validation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WinForms, Version=5.0.414.0, Culture=neutral, PublicKeyToken=abefde60aa51e9a6, processorArchitecture=MSIL">
+      <HintPath>..\packages\ITS.Core.5.2.7398.418\lib\Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WinForms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\ITS.Core.5.2.7398.418\lib\Microsoft.Practices.ServiceLocation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=2.1.505.0, Culture=neutral, PublicKeyToken=abefde60aa51e9a6, processorArchitecture=MSIL">
+      <HintPath>..\packages\ITS.Core.5.2.7398.418\lib\Microsoft.Practices.Unity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=2.1.505.0, Culture=neutral, PublicKeyToken=abefde60aa51e9a6, processorArchitecture=MSIL">
+      <HintPath>..\packages\ITS.Core.5.2.7398.418\lib\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception, Version=2.1.505.0, Culture=neutral, PublicKeyToken=abefde60aa51e9a6, processorArchitecture=MSIL">
+      <HintPath>..\packages\ITS.Core.5.2.7398.418\lib\Microsoft.Practices.Unity.Interception.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception.Configuration, Version=2.1.505.0, Culture=neutral, PublicKeyToken=abefde60aa51e9a6, processorArchitecture=MSIL">
+      <HintPath>..\packages\ITS.Core.5.2.7398.418\lib\Microsoft.Practices.Unity.Interception.Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NetTopologySuite, Version=1.13.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ITS.Core.5.2.7398.418\lib\NetTopologySuite.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NetTopologySuite.IO.GeoTools, Version=1.13.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ITS.Core.5.2.7398.418\lib\NetTopologySuite.IO.GeoTools.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NetTopologySuite.IO.MsSqlSpatial, Version=1.13.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ITS.Core.5.2.7398.418\lib\NetTopologySuite.IO.MsSqlSpatial.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NetTopologySuite.IO.PostGis, Version=1.13.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ITS.Core.5.2.7398.418\lib\NetTopologySuite.IO.PostGis.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\ITS.Core.5.2.7398.418\lib\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NHibernate, Version=3.1.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\ITS.Core.5.2.7398.418\lib\NHibernate.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NHibernate.Search, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ITS.Core.5.2.7398.418\lib\NHibernate.Search.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NHibernate.Spatial, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ITS.Core.5.2.7398.418\lib\NHibernate.Spatial.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PowerCollections, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ITS.Core.5.2.7398.418\lib\PowerCollections.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Sanford.StateMachineToolkit, Version=6.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ITS.Plugin.Core.5.2.7398.418\lib\Sanford.StateMachineToolkit.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Serialize.Linq, Version=1.1.4878.20799, Culture=neutral, PublicKeyToken=25bcc11ba213b377, processorArchitecture=MSIL">
+      <HintPath>..\packages\ITS.Core.5.2.7398.418\lib\Serialize.Linq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <HintPath>..\packages\ITS.Core.5.2.7398.418\lib\System.ComponentModel.DataAnnotations.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Version.cs">
+      <Link>Version.cs</Link>
+    </Compile>
+    <Compile Include="EventArgses\VeloObjectEventArgs.cs" />
+    <Compile Include="Helpers\VeloObjectPanelHelper.cs" />
+    <Compile Include="IPresenters\IAngleManagePresenter.cs" />
+    <Compile Include="IPresenters\IBasePresenter.cs" />
+    <Compile Include="IPresenters\IVeloObjectSummaryPresenter.cs" />
+    <Compile Include="IPresenters\IZoomPresenter.cs" />
+    <Compile Include="IViews\IAngleManageView.cs" />
+    <Compile Include="IViews\IBaseView.cs" />
+    <Compile Include="IViews\IVeloObjectEditView.cs" />
+    <Compile Include="IViews\IVeloObjectInfoView.cs" />
+    <Compile Include="IViews\IVeloObjectSummaryView.cs" />
+    <Compile Include="IViews\IZoomView.cs" />
+    <Compile Include="LocateUtils.cs" />
+    <Compile Include="Presenters\AngleManagePresenter.cs" />
+    <Compile Include="Presenters\BasePresenter.cs" />
+    <Compile Include="Presenters\VeloObjectSummaryPresenter.cs" />
+    <Compile Include="Presenters\ZoomPresenter.cs" />
+    <Compile Include="Properties\Resources.Designer.cs" />
+    <Compile Include="Reports\ReportHelper.cs" />
+    <Compile Include="Reports\VeloObjectFindReport.cs" />
+    <Compile Include="VeloObjectConfigResolver.cs" />
+    <Compile Include="VeloObjectConstants.cs" />
+    <Compile Include="VeloObjectLayerLoader.cs" />
+    <Compile Include="VeloObjectLayerRenderer.cs" />
+    <Compile Include="VeloObjectPanel.cs" />
+    <Compile Include="VeloObjectPanelResourceHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\AngleManageView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AngleManageView.designer.cs">
+      <DependentUpon>AngleManageView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BaseView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\VeloObjectEditView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\VeloObjectEditView.Designer.cs">
+      <DependentUpon>VeloObjectEditView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\VeloObjectInfoView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\VeloObjectInfoView.Designer.cs">
+      <DependentUpon>VeloObjectInfoView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\VeloObjectSummaryView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\VeloObjectSummaryView.Designer.cs">
+      <DependentUpon>VeloObjectSummaryView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ZoomView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ZoomView.designer.cs">
+      <DependentUpon>ZoomView.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AngleManageView.resx">
+      <DependentUpon>AngleManageView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BaseView.resx">
+      <DependentUpon>BaseView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\VeloObjectEditView.resx">
+      <DependentUpon>VeloObjectEditView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\VeloObjectInfoView.resx">
+      <DependentUpon>VeloObjectInfoView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\VeloObjectSummaryView.resx">
+      <DependentUpon>VeloObjectSummaryView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ZoomView.resx">
+      <DependentUpon>ZoomView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ITS.Core.Spectrum\ITS.Core.Spectrum.csproj">
+      <Project>{67357310-F809-4BFA-8129-E84F0427195A}</Project>
+      <Name>ITS.Core.Info</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ITS.Managers.SpectrumManagers\ITS.Managers.SpectrumManagers.csproj">
+      <Project>{14CE6481-AA5E-44C2-B9EA-1DDE83D21024}</Project>
+      <Name>ITS.Managers.InfoManagers</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ITSGIS.exe.config">
+      <TransformOnBuild>true</TransformOnBuild>
+    </None>
+    <None Include="ITSGIS.exe.Debug.config">
+      <DependentUpon>ITSGIS.exe.config</DependentUpon>
+      <IsTransformFile>True</IsTransformFile>
+    </None>
+    <None Include="ITSGIS.exe.Release.config">
+      <DependentUpon>ITSGIS.exe.config</DependentUpon>
+      <IsTransformFile>True</IsTransformFile>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\ITS.Core.Spectrum.Domain.Enums.SomeTypeHelper.datasource" />
+    <None Include="Resources\EditOrganizationImageSource.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\itsgisWND_BG-11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\itsgisWND_BottomButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddOrganizationImageSource.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteOrganizationImageSource.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fax.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icq.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\site.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\skype.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\time.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dinner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OrganizationInformationImageSource.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SearchOrganizationImageSource.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OrganizationInformationImageSource1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EditAdvertisementImageSource.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Advertisement_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Advertisement_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Advertisement_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Advertisement_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Advertisement_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controls\" />
+    <Folder Include="IModels\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AcceptImageSource.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddSomeObject.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BackImageSource.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CancelImageSource.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CreatePointImageSource.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteSomeObjectImageSource.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EditGeometrySomeObjectImageSource.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EditSomeObjectImageSource.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ForwardImageSource.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InfoRoadRepairImageSource.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SearchImageSource.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SelectImageSource.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SelectSomeObjectDismantleSmallImageSource.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SelectSomeObjectRequiredSmallImageSource.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SelectSomeObjectSetSmallImageSource.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SomeObjectInformationImageSource.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SomeObjectInformationImageSource1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SearchSomeObjectImageSource.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SelectSomeObjectImageSource.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SomeObjectInfoImageSource.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CopySomeObjectImageSource.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SomeObjectRotateImageSource.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CopyPastSomeObjectImageSource.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PluginBaseSelectVeloObjectCelebrateSmallImageSource.png" />
+    <None Include="Resources\PluginBaseSelectVeloObjectCelebrationSmallImageSource.png" />
+    <None Include="Resources\PluginBaseSelectVeolObjectCelebrationSmallImageSource.png" />
+    <None Include="Resources\PluginBaseSummaryImageSource.png" />
+    <None Include="Resources\PluginBaseVeloObjectInfoImageSource1.png" />
+    <None Include="Resources\VeloObjectInfoImageSource.png" />
+    <None Include="Resources\PluginBaseSelectVeloObjectMobileSmallImageSource.png" />
+    <None Include="Resources\PluginBaseSelectVeolObjectMobileSmallImageSource.png" />
+    <None Include="Resources\vertical.jpg" />
+    <None Include="Resources\podv.jpg" />
+    <None Include="Resources\p_obrazn.JPG" />
+    <None Include="Resources\velosip_kletka.JPG" />
+    <None Include="Resources\StatementsImageSource.png" />
+    <None Include="Resources\PluginBaseSelectVeloObjectImageSource.png" />
+    <None Include="Resources\PluginBaseVeloObjectInfoImageSource.png" />
+    <None Include="Resources\PluginBaseSelectVeloObjectSetSmallImageSource.png" />
+    <None Include="Resources\PluginBaseSelectVeloObjectRequiredSmallImageSource.png" />
+    <None Include="Resources\PluginBaseSelectVeloObjectDismantleSmallImageSource.png" />
+    <None Include="Resources\PluginBaseSearchVeloObjectImageSource.png" />
+    <None Include="Resources\PluginBaseMoveVeloObjectImageSource.png" />
+    <None Include="Resources\PluginBaseEditVeloObjectImageSource.png" />
+    <None Include="Resources\PluginBaseDeleteVeloObjectImageSource.png" />
+    <None Include="Resources\PluginBaseCopyPasteVeloObjectImageSource.png" />
+    <None Include="Resources\PluginBaseSelectSomeObjectDismantleSmallImageSource.png" />
+    <None Include="Resources\PluginBaseSelectSomeObjectRequiredSmallImageSource.png" />
+    <None Include="Resources\PluginBaseSelectSomeObjectSetSmallImageSource.png" />
+    <None Include="Resources\PluginBaseSearchSomeObjectImageSource.png" />
+    <None Include="Resources\PluginBaseRotateGeometryImageSource.png" />
+    <None Include="Resources\PluginBaseSomeObjectInfoImageSource.png" />
+    <None Include="Resources\PluginBaseMoveSomeObjectImageSource.png" />
+    <None Include="Resources\PluginBaseEditSomeObjectImageSource.png" />
+    <None Include="Resources\PluginBaseCopyPasteSomeObjectImageSource.png" />
+    <None Include="Resources\PluginBaseDeleteObjectImageSource.png" />
+    <None Include="Resources\PluginBaseCancelImageSource.png" />
+    <None Include="Resources\PluginBaseSelectSomeObjectImageSource.png" />
+    <None Include="Resources\PluginBaseForwardImageSource.png" />
+    <None Include="Resources\PluginBaseBackImageSource.png" />
+    <None Include="Resources\PluginBaseMoveSomeObjectUserFunctionalName.png" />
+    <None Include="Resources\AddPointObjectImageSource.png" />
+    <None Include="Resources\mobile.png" />
+    <None Include="Resources\auto_phone.png" />
+    <None Include="Resources\PluginBaseAcceptImageSource.png" />
+    <None Include="Resources\EditGeometryVeloObjectImageSource.png" />
+    <None Include="Resources\horizontal.png" />
+    <None Include="Resources\cage.png" />
+    <None Include="Resources\design.jpg" />
+    <None Include="Resources\dvuhurovn.jpg" />
+    <None Include="Resources\horizontal1.jpg" />
+    <None Include="Resources\loсkbox.png" />
+    <None Include="Resources\none.png" />
+    <None Include="Resources\ITSGIS Icon.ico" />
+    <None Include="Resources\horizontal.jpg" />
+    <None Include="Resources\lockbox1.png" />
+    <None Include="Resources\box1.png" />
+    <None Include="Resources\none1.png" />
+    <None Include="Resources\parking1.png" />
+    <None Include="Resources\1.png" />
+    <None Include="Resources\2.png" />
+    <None Include="Resources\3.png" />
+    <None Include="Resources\4.png" />
+    <None Include="Resources\5.png" />
+    <None Include="Resources\6.png" />
+    <None Include="Resources\7.png" />
+    <None Include="Resources\8.png" />
+    <None Include="Resources\n8.png" />
+    <None Include="Resources\n1.png" />
+    <None Include="Resources\n2.png" />
+    <None Include="Resources\n3.png" />
+    <None Include="Resources\n4.png" />
+    <None Include="Resources\n5.png" />
+    <None Include="Resources\n6.png" />
+    <None Include="Resources\n7.png" />
+    <None Include="Resources\11.png" />
+    <None Include="Resources\d1.png" />
+    <None Include="Resources\d2.png" />
+    <None Include="Resources\d3.png" />
+    <None Include="Resources\d4.png" />
+    <None Include="Resources\d5.png" />
+    <None Include="Resources\d6.png" />
+    <None Include="Resources\d7.png" />
+    <None Include="Resources\d8.png" />
+    <None Include="Resources\knone.png" />
+    <None Include="Resources\dnone.png" />
+    <Content Include="Resources\PluginBaseAddLineObjectImageSource.png" />
+    <None Include="Resources\PluginBaseAddPointObjectImageSource.png" />
+    <Content Include="Resources\PluginBaseAddPolygonObjectImageSource.png" />
+    <None Include="Resources\RotateGeometryImageSource.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+  <Import Project="$(SlowCheetahTargets)" Condition="Exists('$(SlowCheetahTargets)')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,89 @@
+﻿<?xml version="1.0"?>
+<project name="ITS Build" xmlns="http://nant.sf.net/release/0.90/nant.xsd">
+	<property name="build_config" value="Debug" />
+	<property name="build_dir" value="${path::combine('bin', build_config)}" />
+	<property name="output_client_dir" value="${path::combine('bin\Client', build_config)}" />
+	<property name="output_server_dir" value="${path::combine('bin\Server', build_config)}" />
+	<property name="client_source_dir" value="ITS.MapObjects.SpectrumMapObject\" />
+	<property name="client_build_dir" value="${path::combine(path::get-full-path(client_source_dir), build_dir)}" />
+	<property name="server_source_dir" value="ITS.Services.SpectrumServices\" />
+	<property name="server_build_dir" value="${path::combine(path::get-full-path(server_source_dir), build_dir)}" />
+	<property name="build_version" value="1.0" />
+	<property name="build_number" value="1.0.0.0" />
+	<property name="msbuild" value="${path::combine(framework::get-framework-directory(framework::get-target-framework()), 'MSBuild.exe')}" />
+	<property name="nuget_source" value="" />
+		
+	<target name="build_ITS.MapObjects.SpectrumMapObject">		
+		<exec program="${msbuild}">
+			<arg value="/p:Configuration=${build_config}" />
+			<arg value="/p:OutputPath=${client_build_dir}" />
+			<arg value="/p:PackageSources=&quot;${nuget_source}&quot;" />
+			<arg value="${path::get-full-path(path::combine(client_source_dir, 'ITS.MapObjects.SpectrumMapObject.csproj'))}" />
+		</exec>
+	</target>
+	
+	<target name="build_ITS.Services.SpectrumServices">
+		<exec program="${msbuild}">
+			<arg value="/p:Configuration=${build_config}" />
+			<arg value="/p:OutputPath=${server_build_dir}" />
+			<arg value="/p:PackageSources=&quot;${nuget_source}&quot;" />
+			<arg value="${path::get-full-path(path::combine(server_source_dir, 'ITS.Services.SpectrumServices.csproj'))}" />
+		</exec>
+	</target>
+	
+	<target name="build_Migration">
+		<exec program="${msbuild}">
+			<arg value="/p:Configuration=${build_config}" />
+			<arg value="/p:OutputPath=${path::get-full-path('bin\Migration\')}" />
+			<arg value="/p:PackageSources=&quot;${nuget_source}&quot;" />
+			<arg value="${path::get-full-path('ITS.DbMigration.Spectrum\ITS.DbMigration.Spectrum.csproj')}" />
+		</exec>
+	</target>
+		
+	<target name="build_Spectrum" depends="change_version, build_ITS.MapObjects.SpectrumMapObject,
+									 build_ITS.Services.SpectrumServices" />
+
+	<target name="change_version">
+		<if test="${string::get-length(build_version) != 0}" >
+			<echo message="Версия сборки ${build_version}" />
+			<move file="Version.cs" tofile="Version.cs.tmp">
+				<filterchain>
+					<replacestring from="AssemblyVersion(&quot;1.0&quot;)" 
+								   to="AssemblyVersion(&quot;${build_version}&quot;)" />
+				    <replacestring from="AssemblyFileVersion(&quot;1.0.0.0&quot;)" 
+								   to="AssemblyFileVersion(&quot;${build_number}&quot;)" />
+				</filterchain>
+			</move>
+			<move file="Version.cs.tmp" tofile="Version.cs" overwrite="true" />
+		</if>
+	</target>
+	
+	<target name="dir_for_bin">
+		<property name="output_client" value="${path::combine(output_client_dir, build_config)}" />
+		<property name="output_server" value="${path::combine(output_server_dir, build_config)}" />
+		<delete dir="output_client" if="${directory::exists(output_client)}" />
+		<delete dir="output_server" if="${directory::exists(output_server)}" />
+		<mkdir dir="output_client" />
+		<mkdir dir="output_server" />
+	</target>
+	
+	<target name="copy_bins" >
+		<copy todir="bin\Client\${build_config}">
+			<fileset basedir="${client_build_dir}">
+				<include name="*.*" />
+				<exclude name="*.pdb" if="${build_config == 'Release'}" />
+				<exclude name="*.xml" if="${build_config == 'Release'}" />
+			</fileset>
+		</copy>
+		<copy todir="bin\Server\${build_config}">
+			<fileset basedir="${server_build_dir}">
+				<include name="*.*" />
+				<exclude name="*.pdb" if="${build_config == 'Release'}" />
+				<exclude name="*.xml" if="${build_config == 'Release'}" />
+			</fileset>
+		</copy>
+	</target>
+	
+	<target name="create_bins" depends="dir_for_bin, build_Spectrum, copy_bins" />
+	
+</project>

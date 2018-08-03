@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+  <class lazy="false" name="ITS.Core.Spectrum.Domain.VeloObject, ITS.Core.Spectrum" table="vo_velo_object">
+    <id name="ID" column="id" type="long" unsaved-value="0">
+      <generator class="hilo" />
+    </id>   
+    <property column="velo_type" name="VeloType"
+              type="NHibernate.Type.EnumStringType`1[[ITS.Core.Spectrum.Domain.Enums.VeloType, ITS.Core.Spectrum]], NHibernate"
+              not-null="false" />
+    <property column="velo_view" name="VeloView"
+              type="NHibernate.Type.EnumStringType`1[[ITS.Core.Spectrum.Domain.Enums.VeloView, ITS.Core.Spectrum]], NHibernate"
+              not-null="false" />
+    <property column="velo_section" name="VeloSection" type="int" />
+    <property column="velo_length" name="VeloLength" type="float" />
+    <property column="velo_width" name="VeloWidth" type="float" />
+    <property column="data_set" name="DataSet" type="DateTime" />
+    <property column="data_check" name="DataCheck" type="DateTime" />
+    <property column="angle" name ="Angle" type="double" />
+    
+
+    <property column="velo_object_status" name="VeloObjectStatus"
+              type="NHibernate.Type.EnumStringType`1[[ITS.Core.Spectrum.Domain.Enums.VeloObjectStatus, ITS.Core.Spectrum]], NHibernate"
+              not-null="false" />
+    
+    <many-to-one column="feature_object_id" name ="FeatureObject" class="ITS.Core.Domain.FeatureObjects.FeatureObject, ITS.Core" not-null="true" cascade="all"/>
+    
+  </class>
+</hibernate-mapping>
